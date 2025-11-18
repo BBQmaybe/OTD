@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+
+    background: #2c3e50;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 0.5rem;
+    background: #34495e;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #1abc9c;
+}
+
+.sidebar .active {
+    background: #e67e22;    
+}
+
+/* вся страница справа от сайдбара */
+.page {
+    margin-left: 260px; /* отступ равно ширине сайдбара */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* основной контент */
+.content {
+    max-width: 100%;
+}
+
+  
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background: #ecf0f1;
+}
+
+tbody tr:nth-child(even) {
+    background: #ffffff;
+}
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.3rem 0;
+}
+
+.list-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+
+.section-title {
+    position: relative;
+    cursor: pointer;
+}
+
+.section-title:hover::after {
+    content: " #";
+    color: #3498db;
+}
+
+.animated-text {
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.4; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1.02); }
+}
+
+.nav-item {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+  
+    background: #34495e;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    display: block;
+  
+    margin-bottom: 0.5rem;
+}
+
+.nav-item:hover {
+    background: #1abc9c;
+}
+
+.nav-item.active {
+    background: #e67e22; /* цвет активной вкладки */
+}
+  
